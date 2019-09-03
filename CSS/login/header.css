@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size:13px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #81DAF5;
+    display: flex;
+    flex-direction: row;
+}
+    .header .header-left {
+        width: 150px;
+        height: 50px;
+        margin: 10px 0;
+        position: absolute;
+    }
+        .header .header-left .logo {
+            width: 35px;
+            height: 35px;
+            padding: 10px 0;
+        }
+        .header .header-left .logo-qa {
+            width: 80px;
+            height: 35px;
+            padding: 10px 0;
+        }
+    .header .elasticity {
+        width: 100%;
+        height: 70px;;
+    }
+    .header .header-right {
+        width: 370px;
+        height: 50px;
+        margin: auto 0;
+        display: flex;
+    }
+    .header .header-right button {
+        border: none;
+        border: 1px solid #ffffff;
+        border-radius: 3px;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .header .header-right a {
+        color: #ffffff;
+        font-weight: 700;
+        width: 123px;
+        height: 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .header .header-right .login {
+        
+        background-color: #F78181;
+        border-radius: 3px;
+        
+    }
+    .header .header-right a div {
+        margin: 17px 0;
+    }
+    .header .header-right a:hover {
+        cursor: pointer;
+        width: 127px;
+        font-size: 16px;
+
+    }
