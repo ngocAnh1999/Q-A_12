@@ -1,9 +1,11 @@
 .content {
     background-color: #d8d8d8;
     padding: 40px 20px;
+    overflow: auto;
 }
 .content .toolbar {
     margin: auto 0;
+    padding: 0;
 }
 .content .group-form {
     width: 100%;
@@ -20,9 +22,25 @@
     padding: 4px 8px;
 }
 .content .body-content {
-    margin-left: 8px;
+    margin: 45px 0;
     width: 100%;
-    height: 400px;
+    height: 310px;
+    
+}
+
+.body-content button {
+    border: none;
     background-color: #ffffff;
-    overflow: auto;
+    border: 1px solid #d8d8d8;
+    margin: 0 !important;
+}
+.body-content .add-new {
+    height: 280px;
+}
+.body-content .add-new button {
+    padding: 35px 0;
+    height: 50%;
+}
+.body-content .form-block button {
+    height: 280px;
 }
