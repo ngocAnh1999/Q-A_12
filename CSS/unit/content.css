@@ -1,0 +1,32 @@
+.body-content {
+    background-color: #E8F2F4;
+    height: 100%;
+}
+.body-content .toolbar {
+    background-color: #fff;
+    height: 45px;
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+}
+.body-content .content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.body-content .content div {
+    background-color: #fff;
+    width: 60%;
+    border: 1px solid #d0d0d0;
+    margin: 0 auto;
+}
+.body-content .content .title-content {
+    margin-top: 20px;
+    height: 60px;
+    text-align: center;
+}
+.body-content .content .form-question {
+    height: 100%;
+    margin-bottom: 30px;
+}

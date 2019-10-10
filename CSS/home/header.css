@@ -42,13 +42,16 @@
 
 .header .avatar img {
     border-radius: 100%;
-    margin-right: 8px;
     width: 35px;
     height: 35px;
     background-size: cover;
-    margin: auto 0;
+    margin: auto 8px;
 }
 
 .genaral, .q-a, .avatar, .user-account:hover {
     cursor: pointer;
+}
+
+.header .unit-name {
+    text-align: center;
 }
