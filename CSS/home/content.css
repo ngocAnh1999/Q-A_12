@@ -2,6 +2,11 @@
     background-color: #d8d8d8;
     padding: 40px 20px;
     overflow: auto;
+    top: 55px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 .content .toolbar {
     margin: auto 0;

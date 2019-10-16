@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.home .post {
+  overflow: hidden !important;
+    padding-left: 80px;
+    margin: 20px auto;
+    border: 1px solid #d0d0d0;
+    background-color: rgb(189, 225, 226);
+    width: 80%;
+    
+}
+a, a:hover {
+  text-decoration: none;
+  color: #360101;
+}
+a:hover {
+  font-weight: bolder;
+  color: #5a0303;
+}
+
+.home .post img {
+  /* top: 20px;
+  left: 100px; */
+  opacity: 0.6;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  /* z-index: -1; */
+  position: absolute;
+  left: 50px;
+  margin: auto 0;
 }
