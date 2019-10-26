@@ -4,8 +4,7 @@
     /* color: #fff; */
     font-size: 20px;
     font-weight: 600;
-    overflow: hidden;
-    
+
 }
 
 .header div {
@@ -48,4 +47,11 @@
 
 .header .unit-name {
     text-align: center;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }
