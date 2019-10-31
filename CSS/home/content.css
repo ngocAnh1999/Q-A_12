@@ -1,6 +1,6 @@
 .content {
     background-color: #d8d8d8;
-    padding: 40px 20px;
+    padding: 20px 10px;
     overflow: auto;
     top: 55px;
     bottom: 60px;
@@ -13,12 +13,14 @@
     padding: 0;
     font-size: 25px;
     font-weight: 600;
+    margin-left: 14px;
 }
 .content .group-form {
     width: 100%;
     height: 60px;
     margin-left: 8px;
 }
+
 .content .group-form .search-cls {
     margin: auto 0;
     padding: 0;
@@ -29,18 +31,17 @@
     padding: 4px 8px;
 }
 .content .body-content {
-    margin: 45px 0;
     width: 100%;
     overflow: auto;
 }
-
-.body-content button {
-    border: none;
+.admin-tag button {
+    /* border: none;
     background-color: #ffffff;
     border: 1px solid #d8d8d8;
-    margin: 0 !important;
+    margin: 0 !important; */
+    width: 60px;
 }
-.body-content button:hover {
+/* .body-content button:hover {
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
     color: #2ce296;
@@ -48,7 +49,7 @@
     text-shadow: -1px -1px 0 #b3cdf0;
     transition: all 250ms linear;
     font-size: 18px;
-}
+} */
 
 .body-content .add-new {
     height: 280px;
@@ -62,9 +63,18 @@
     height: 280px;
     margin-bottom: 15px;
 }
+.body-content .wrap-content {
+    width: 60%;
+}
+
 
 .body-content .wrap-content:hover {
     background-color: antiquewhite;
     border: 1px solid #ee6565;
     
+}
+.body-content .wrap-content .add-reply {
+    width: 90%;
+    height: 150px;
+    overflow: auto;
 }

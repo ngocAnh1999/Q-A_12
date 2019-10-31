@@ -17,7 +17,7 @@
 }
 @media (min-height: 300px){
     .body-content .content {
-        height: 506px;
+        height: 450px;
         /* overflow: auto; */
         width: 600px;
         margin-top: 20px;

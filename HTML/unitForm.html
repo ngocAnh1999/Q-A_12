@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,44 +17,83 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../CSS/style.css"/>
-    <link rel="stylesheet" href="../CSS/home/header.css"/>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/home/header.css" />
     <link rel="stylesheet" href="../CSS/unit/content.css" />
     <link rel="stylesheet" href="../CSS/home/footer.css" />
 </head>
+
 <body>
     <div class="container-fluid">
-            <div class="row header text-white">
-                    <div class="col-sm-3 left">
-                            <div class="genaral"></div>
-                            <div class="q-a">Question & Answer</div>
-                    </div>
-        
-                    <div class="col">
-                        <h3 class="unit-name">Unit Form</h3>
-                    </div>
-        
-                    <div class="col-md-3 user">
-                        <div class="avatar"><img src="../Content/image/default_avata.png"/></div>
-                        <div class="user-account">Đặng Thị Ngọc Ánh</div>
-                    </div>
-                </div>
-            <div class="body-content">
-                <div class="row toolbar  font-weight-bolder border-bottom">
-                    <div class="col"></div>
-                    <a href="#" class="col-md-1 text-info my-auto">Preview</a>
-                    <a href="#" class="col-md-1 text-success my-auto">Share</a>
-                    <a href="#" class="col-md-1 text-danger my-auto">Setting</a>
-                </div>
-                <div class="row content mx-auto">
-                    <div class="">
+        <div class="row header text-white">
+            <div class="col-sm-3 left">
+                <div class="genaral"></div>
+                <div class="q-a">Question & Answer</div>
+            </div>
 
-                    </div>
+            <div class="col">
+                <h3 class="unit-name">Unit Form</h3>
+            </div>
+
+            <div class="col-md-3 user">
+                <div class="avatar"><img src="../Content/image/default_avata.png" /></div>
+                <div class="user-account">Đặng Thị Ngọc Ánh</div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="row toolbar  font-weight-bolder border-bottom">
+                <div class="col"></div>
+                <a href="#common" class="col-md-1 text-info my-auto">Câu hỏi thường</a>
+                <a href="#multi-choice" class="col-md-1 text-success my-auto">Câu hỏi multi-choice</a>
+                <a href="#evaluate" class="col-md-1 text-danger my-auto">Câu hỏi đánh giá</a>
+                <!-- <a href="#" class="col-md-1 text-secondary my-auto">Câu hỏi hình ảnh</a> -->
+            </div>
+            <div class="row content mx-auto d-flex flex-column">
+                <div class="m-4" id="common">
+                    <h3>Câu hỏi thường</h3>
+                    <label>Tiêu đề: </label>
+                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
+                    <span class="text-danger">(*)</span><br>
+                    <label>Câu hỏi: </label>
+                    <textarea></textarea>
+                </div>
+                <div class="m-4" id="multi-choice">
+                    <h3>Câu hỏi multi-choice</h3>
+                    <label>Tiêu đề: </label>
+                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
+                    <span class="text-danger">(*)</span><br>
+                    <label>Nội dung: </label>
+                    <input type="text" placeholder="Nhập câu hỏi" />
+                    <span class="text-danger">(*)</span><br>
+                    <button type="button" onclick="javascript:addMultiAnswer(this)" class="multi-ans btn btn-info">Thêm
+                        đáp án</button>
+                </div>
+                <div class="m-4" id="evaluate">
+                    <h3>Câu hỏi đánh giá</h3>
+                    <label>Tiêu đề: </label>
+                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
+                    <span class="text-danger">(*)</span><br>
+                    <label>Câu hỏi: </label>
+                    <input type="text" />
+                    <span class="text-danger">(*)</span><br>
+                    <input type="radio" name="evaluate" id="eval-bad" value="Bad" >
+                    <label>Tệ</label><br>
+                    <input type="radio" name="evaluate" id="eval-medium" value="Medium" >
+                    <label>Bình thường</label><br>
+                    <input type="radio" name="evaluate" id="eval-good" value="Good" >
+                    <label>Hay</label><br>
+                    <input type="radio" name="evaluate" id="eval-great" value="Great" >
+                    <label>Rất tuyệt</label>
                 </div>
             </div>
-            <div class="footer">
-
+            <div class=" mt-4 d-flex">
+                <button class="btn btn-info mx-auto" type="button">Đăng câu hỏi lên diễn đàn</button>
             </div>
+        </div>
+        <div class="footer">
+
+        </div>
     </div>
 </body>
+
 </html>

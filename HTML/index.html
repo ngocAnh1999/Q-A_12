@@ -17,10 +17,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../CSS/style.css"/>
-    <link rel="stylesheet" href="../CSS/home/header.css"/>
-    <link rel="stylesheet" href="../CSS/home/content.css"/>
-    <link rel="stylesheet" href="../CSS/home/footer.css"/>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/home/header.css" />
+    <link rel="stylesheet" href="../CSS/home/content.css" />
+    <link rel="stylesheet" href="../CSS/home/footer.css" />
 
 </head>
 
@@ -28,123 +28,227 @@
     <div class="container-fluid">
         <div class="row header text-white">
             <div class="col-sm-3 left">
-                    <div class="genaral"></div>
-                    <div class="q-a">Question & Answer</div>
+                <div class="genaral"></div>
+                <div class="q-a">Question & Answer</div>
             </div>
 
             <div class="col"></div>
 
             <div class="col-md-2 user">
-                <div class="avatar"><img src="../Content/image/default_avata.png"/></div>
+                <div class="avatar"><img src="../Content/image/default_avata.png" /></div>
                 <div class="user-account dropdown">
                     <div class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</div>
                     <span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li role="presentation" class="text-center"><a role="menuitem" href="#">Đăng xuất</a></li>
-                        
+
                     </ul>
                 </div>
             </div>
         </div>
         <div class="content">
-            <div class="row group-form">
+            <div id="toolbar-header" class="row group-form">
                 <div class="col-sm-8 toolbar">
                     <div class="row">
-                            <ul class="nav nav-tabs">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" href="#">Diễn đàn</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" href="#">Đặt câu hỏi</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Thống kê câu hỏi</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" href="#">Quản lý tài khoản</a>
-                                    </li>
-                                </ul>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Diễn đàn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Đặt câu hỏi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thống kê câu hỏi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quản lý tài khoản</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-sm-3 col-md-3 search-cls">
-                    <input placeholder="Tìm kiếm"/>
-                </div>
+                <form class="d-flex col-sm-4 col-md-3 search-cls" action="#" method="post">
+                    <input class="col-sm-8" name="search" placeholder="Tìm kiếm" />
+                    <input class="col-sm-3 ml-2 btn btn-dark" type="submit" value="Search" />
+                </form>
             </div>
             <div class="row body-content d-flex flex-column justify-content-center">
-                <div class="wrap-content p-3 border bg-light mb-4">
+                <div class="wrap-content p-3 border bg-light mb-4 mx-auto">
                     <div class="user-account">
+                        <label>Người đặt câu hỏi: </label>
                         <a href="#" class="">Đặng Thị Ngọc Ánh</a>
                     </div>
                     <div class="row">
-                        <div class="col-md">
+                        <div class="col-md d-flex flex-column">
+                            <div>
 
-                            <h4 class="subject-qa">Câu hỏi thường</h4>
-                            <p class="content-qa">
-                                NOTE: có version thì cái chọn ngôn ngữ này 
-                                Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên 
-                                và truy cập vào địa chỉ localhost lần đầu tiên 
+                                <label class="font-weight-bold text-primary">Tiêu đề: </label>
+                                <span class="subject-qa font-weight-bold" name="title-content">Câu hỏi thường</span>
+                            </div>
+                            <p name="content-qa">
+                                NOTE: có version thì cái chọn ngôn ngữ này
+                                Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                và truy cập vào địa chỉ localhost lần đầu tiên
                                 thì nó sẽ cho chọn ngôn ngữ ở đấy.
-                                có version thì cái chọn ngôn ngữ này 
-                                Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên 
-                                và truy cập vào địa chỉ localhost lần đầu tiên 
+                                có version thì cái chọn ngôn ngữ này
+                                Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                và truy cập vào địa chỉ localhost lần đầu tiên
                                 thì nó sẽ cho chọn ngôn ngữ ở đấy.
-                                có version thì cái chọn ngôn ngữ này 
+                                có version thì cái chọn ngôn ngữ này
                             </p>
+                            <div>
+                                <button type="button" class="btn btn-primary" onclick="hidden()">Ẩn câu hỏi</button>
+                            </div>
                         </div>
                         <div class="border border-success"></div>
                         <div class="col-md">
-                                
+
                             <h4>Câu trả lời của chủ tọa:</h4>
-                            <p class="admin-rep">Chưa có câu trả lời</p>
-                            
+                            <p name="admin-rep" class="admin-rep">Chưa có câu trả lời</p>
+                            <textarea class="add-reply d-none p-2" name="add-reply"></textarea>
+                            <button onclick="" name="complete-add" type="button"
+                                class="complete-add d-none btn btn-success">Ghi nhận</button>
+                            <button type="button" onclick="javascript:buttonClose(this)"
+                                class="close-rep btn btn-warning d-none">Hủy</button>
                         </div>
-                        <div class="d-flex align-items-end flex-column mr-2">
-                                <div class="p-2 border border-secondary">Add</div>
-                                <div class="p-2 border border-secondary mt-2">Edit</div>
-                                <div class="p-2 border border-secondary mt-2">Delete</div>
-                            </div>
+                        <div class="admin-tag d-flex align-items-end flex-column mr-2">
+                            <button onclick="javascript:displayAdminRep(this)" type="button"
+                                class="p-2 btn btn-success mb-2">Trả lời</button>
+                            <button type="button" class="p-2 btn btn-info mb-2">Sửa</button>
+                            <button type="button" class="p-2 btn btn-danger disabled">Xóa</button>
+                        </div>
                     </div>
                 </div>
-                <div class="wrap-content p-3 border bg-light mb-4">
+                <div class="wrap-content p-3 border bg-light mb-4 mx-auto">
                         <div class="user-account">
+                            <label>Người đặt câu hỏi: </label>
                             <a href="#" class="">Đặng Thị Ngọc Ánh</a>
                         </div>
                         <div class="row">
-                            <div class="col-md">
+                            <div class="col-md d-flex flex-column">
+                                <div>
     
-                                <h4 class="subject-qa">Câu hỏi thường</h4>
-                                <p class="content-qa">
-                                    NOTE: có version thì cái chọn ngôn ngữ này 
-                                    Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên 
-                                    và truy cập vào địa chỉ localhost lần đầu tiên 
+                                    <label class="font-weight-bold text-primary">Tiêu đề: </label>
+                                    <span class="subject-qa font-weight-bold" name="title-content">Câu hỏi thường</span>
+                                </div>
+                                <p name="content-qa">
+                                    NOTE: có version thì cái chọn ngôn ngữ này
+                                    Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                    và truy cập vào địa chỉ localhost lần đầu tiên
                                     thì nó sẽ cho chọn ngôn ngữ ở đấy.
-                                    có version thì cái chọn ngôn ngữ này 
-                                    Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên 
-                                    và truy cập vào địa chỉ localhost lần đầu tiên 
+                                    có version thì cái chọn ngôn ngữ này
+                                    Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                    và truy cập vào địa chỉ localhost lần đầu tiên
                                     thì nó sẽ cho chọn ngôn ngữ ở đấy.
-                                    có version thì cái chọn ngôn ngữ này 
+                                    có version thì cái chọn ngôn ngữ này
                                 </p>
+                                <div>
+                                    <button type="button" class="btn btn-primary" onclick="hidden()">Ẩn câu hỏi</button>
+                                </div>
                             </div>
                             <div class="border border-success"></div>
                             <div class="col-md">
-                                    
+    
                                 <h4>Câu trả lời của chủ tọa:</h4>
-                                <p class="admin-rep">Chưa có câu trả lời</p>
-                                
+                                <p name="admin-rep" class="admin-rep">Chưa có câu trả lời</p>
+                                <textarea class="add-reply d-none p-2" name="add-reply"></textarea>
+                                <button onclick="" name="complete-add" type="button"
+                                    class="complete-add d-none btn btn-success">Ghi nhận</button>
+                                <button type="button" onclick="javascript:buttonClose(this)"
+                                    class="close-rep btn btn-warning d-none">Hủy</button>
                             </div>
-                            <div class="d-flex align-items-end flex-column mr-2">
-                                    <div class="p-2 border border-secondary">Add</div>
-                                    <div class="p-2 border border-secondary mt-2">Edit</div>
-                                    <div class="p-2 border border-secondary mt-2">Delete</div>
-                                </div>
+                            <div class="admin-tag d-flex align-items-end flex-column mr-2">
+                                <button onclick="javascript:displayAdminRep(this)" type="button"
+                                    class="p-2 btn btn-success mb-2">Trả lời</button>
+                                <button type="button" class="p-2 btn btn-info mb-2">Sửa</button>
+                                <button type="button" class="p-2 btn btn-danger disabled">Xóa</button>
+                            </div>
                         </div>
                     </div>
-                
+                    <div class="wrap-content p-3 border bg-light mb-4 mx-auto">
+                            <div class="user-account">
+                                <label>Người đặt câu hỏi: </label>
+                                <a href="#" class="">Đặng Thị Ngọc Ánh</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md d-flex flex-column">
+                                    <div>
+        
+                                        <label class="font-weight-bold text-primary">Tiêu đề: </label>
+                                        <span class="subject-qa font-weight-bold" name="title-content">Câu hỏi thường</span>
+                                    </div>
+                                    <p name="content-qa">
+                                        NOTE: có version thì cái chọn ngôn ngữ này
+                                        Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                        và truy cập vào địa chỉ localhost lần đầu tiên
+                                        thì nó sẽ cho chọn ngôn ngữ ở đấy.
+                                        có version thì cái chọn ngôn ngữ này
+                                        Xampp nó sẽ để ở phần khi chúng ta khởi chạy Apache lên
+                                        và truy cập vào địa chỉ localhost lần đầu tiên
+                                        thì nó sẽ cho chọn ngôn ngữ ở đấy.
+                                        có version thì cái chọn ngôn ngữ này
+                                    </p>
+                                    <div>
+                                        <button type="button" class="btn btn-primary" onclick="hidden()">Ẩn câu hỏi</button>
+                                    </div>
+                                </div>
+                                <div class="border border-success"></div>
+                                <div class="col-md">
+        
+                                    <h4>Câu trả lời của chủ tọa:</h4>
+                                    <p name="admin-rep" class="admin-rep">Chưa có câu trả lời</p>
+                                    <textarea class="add-reply d-none p-2" name="add-reply"></textarea>
+                                    <button onclick="" name="complete-add" type="button"
+                                        class="complete-add d-none btn btn-success">Ghi nhận</button>
+                                    <button type="button" onclick="javascript:buttonClose(this)"
+                                        class="close-rep btn btn-warning d-none">Hủy</button>
+                                </div>
+                                <div class="admin-tag d-flex align-items-end flex-column mr-2">
+                                    <button onclick="javascript:displayAdminRep(this)" type="button"
+                                        class="p-2 btn btn-success mb-2">Trả lời</button>
+                                    <button type="button" class="p-2 btn btn-info mb-2">Sửa</button>
+                                    <button type="button" class="p-2 btn btn-danger disabled">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+            
             </div>
+            
         </div>
         <div class="footer">
 
         </div>
+        <script>
+            // window.onscroll = function () { myFunction() };
+            NodeList.prototype.forEach = Array.prototype.forEach;
+            function displayAdminRep(me) {
+                let admin_rep = me.parentNode.parentNode.getElementsByClassName("admin-rep")[0];
+                admin_rep.classList.add("d-none");
+                let add_reply = me.parentNode.parentNode.getElementsByClassName("add-reply")[0];
+                add_reply.classList.remove("d-none");
+                add_reply.focus();
+
+                let complete_add = me.parentNode.parentNode.getElementsByClassName("complete-add")[0];
+                complete_add.classList.remove("d-none");
+                let close = me.parentNode.parentNode.getElementsByClassName("close-rep")[0];
+                close.classList.remove("d-none");
+                me.parentNode.classList.add("d-none");
+                me.parentNode.classList.remove("d-flex");
+            }
+            function buttonClose(me) {
+                debugger
+                me.parentNode.parentNode.getElementsByClassName("admin-rep")[0].classList.remove("d-none");
+                let add_reply = me.parentNode.parentNode.getElementsByClassName("add-reply")[0];
+                add_reply.classList.add("d-none");
+                let complete_add = me.parentNode.parentNode.getElementsByClassName("complete-add")[0];
+                complete_add.classList.add("d-none");
+                let close = me.parentNode.parentNode.getElementsByClassName("close-rep")[0];
+                close.classList.add("d-none");
+                let admin_tag = me.parentNode.parentNode.getElementsByClassName("admin-tag")[0];
+                admin_tag.classList.add("d-flex");
+                admin_tag.classList.remove("d-none");
+            }
+
+        </script>
     </div>
 </body>
 
