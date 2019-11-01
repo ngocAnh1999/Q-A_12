@@ -41,58 +41,117 @@
             </div>
         </div>
         <div class="body-content">
-            <div class="row toolbar  font-weight-bolder border-bottom">
+            <div class="row toolbar font-weight-bolder border-bottom">
                 <div class="col"></div>
-                <a href="#common" class="col-md-1 text-info my-auto">Câu hỏi thường</a>
-                <a href="#multi-choice" class="col-md-1 text-success my-auto">Câu hỏi multi-choice</a>
-                <a href="#evaluate" class="col-md-1 text-danger my-auto">Câu hỏi đánh giá</a>
+                <button onclick="javascript:openBlockQuestion('common')"
+                    class="col-md-2 btn border-0 px-2 text-info my-auto">Câu hỏi thường</button>
+                <button onclick="javascript:openBlockQuestion('multi-choice')"
+                    class="col-md-2 btn border-0 px-2 text-success my-auto">Câu hỏi multi-choice</button>
+                <button onclick="javascript:openBlockQuestion('evaluate')"
+                    class="col-md-2 btn border-0 px-2 text-danger my-auto">Câu hỏi đánh giá</button>
                 <!-- <a href="#" class="col-md-1 text-secondary my-auto">Câu hỏi hình ảnh</a> -->
             </div>
             <div class="row content mx-auto d-flex flex-column">
-                <div class="m-4" id="common">
+                <div class="m-4 d-flex flex-column" id="common">
                     <h3>Câu hỏi thường</h3>
-                    <label>Tiêu đề: </label>
-                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
-                    <span class="text-danger">(*)</span><br>
-                    <label>Câu hỏi: </label>
-                    <textarea></textarea>
+
+                    <label class="text-info font-weight-bold">Tiêu đề: </label>
+                    <div>
+
+                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" autofocus />
+                        <span class="text-danger">&nbsp;(*)</span>
+                    </div>
+
+                    <label class="text-info font-weight-bold">Câu hỏi: </label>
+                    <div class="d-flex">
+                        <textarea id="input-common"></textarea>
+                        <span class="text-danger ml-1">&nbsp;(*)</span>
+                    </div>
+
                 </div>
-                <div class="m-4" id="multi-choice">
+                <div class="m-4 d-none flex-column" id="multi-choice">
                     <h3>Câu hỏi multi-choice</h3>
-                    <label>Tiêu đề: </label>
-                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
-                    <span class="text-danger">(*)</span><br>
-                    <label>Nội dung: </label>
-                    <input type="text" placeholder="Nhập câu hỏi" />
-                    <span class="text-danger">(*)</span><br>
-                    <button type="button" onclick="javascript:addMultiAnswer(this)" class="multi-ans btn btn-info">Thêm
-                        đáp án</button>
+                    <label class="text-info font-weight-bold">Tiêu đề: </label>
+                        <div>
+                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
+                        <span class="text-danger">&nbsp;(*)</span>
+                    </div>
+                    <label class="text-info font-weight-bold">Nội dung: </label>
+                    <div>
+                        <input type="text" placeholder="Nhập câu hỏi" />
+                        <span class="text-danger">&nbsp;(*)</span>
+                    </div>
+                    <div class="mx-auto my-2">
+                        <button type="button" onclick="javascript:addMultiAnswer(this)"
+                            class="multi-ans btn btn-info">Thêm
+                            đáp án</button>
+                    </div>
                 </div>
-                <div class="m-4" id="evaluate">
+                <div class="m-4 d-none flex-column" id="evaluate">
                     <h3>Câu hỏi đánh giá</h3>
-                    <label>Tiêu đề: </label>
-                    <input name="title" type="text" placeholder="Nhập tiêu đề" />
-                    <span class="text-danger">(*)</span><br>
-                    <label>Câu hỏi: </label>
-                    <input type="text" />
-                    <span class="text-danger">(*)</span><br>
-                    <input type="radio" name="evaluate" id="eval-bad" value="Bad" >
-                    <label>Tệ</label><br>
-                    <input type="radio" name="evaluate" id="eval-medium" value="Medium" >
-                    <label>Bình thường</label><br>
-                    <input type="radio" name="evaluate" id="eval-good" value="Good" >
-                    <label>Hay</label><br>
-                    <input type="radio" name="evaluate" id="eval-great" value="Great" >
-                    <label>Rất tuyệt</label>
+                    <label  class="text-info font-weight-bold">Tiêu đề: </label>
+                    <div>
+                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
+                        <span class="text-danger">&nbsp;(*)</span>
+                    </div>
+                    <label  class="text-info font-weight-bold">Câu hỏi: </label>
+                    <div>
+                        <input type="text" />
+                        <span class="text-danger">&nbsp;(*)</span>
+                    </div>
                 </div>
             </div>
             <div class=" mt-4 d-flex">
-                <button class="btn btn-info mx-auto" type="button">Đăng câu hỏi lên diễn đàn</button>
+                <button class="btn btn-info mx-auto disabled" type="submit">Đăng câu hỏi lên diễn đàn</button>
             </div>
         </div>
         <div class="footer">
 
         </div>
+        <script>
+            function openBlockQuestion(question_id) {
+                document.getElementById(question_id).classList.remove("d-none");
+                document.getElementById(question_id).classList.add("d-flex");
+                switch (question_id) {
+                    case "common": {
+                        if (!document.getElementById("multi-choice").classList.contains("d-none")) {
+                            document.getElementById("multi-choice").classList.add("d-none");
+                            document.getElementById("multi-choice").classList.remove("d-flex");
+                        }
+                        if (!document.getElementById("evaluate").classList.contains("d-none")) {
+                            document.getElementById("evaluate").classList.add("d-none");
+                            document.getElementById("evaluate").classList.remove("d-flex");
+                        }
+                        break;
+                    }
+                    case "multi-choice": {
+                        if (!document.getElementById("common").classList.contains("d-none")) {
+                            document.getElementById("common").classList.add("d-none");
+                            document.getElementById("common").classList.remove("d-flex");
+                        }
+                        if (!document.getElementById("evaluate").classList.contains("d-none")) {
+                            document.getElementById("evaluate").classList.add("d-none");
+                            document.getElementById("evaluate").classList.remove("d-flex");
+                        }
+                        break;
+                    }
+                    case "evaluate": {
+                        if (!document.getElementById("multi-choice").classList.contains("d-none")) {
+                            document.getElementById("multi-choice").classList.add("d-none");
+                            document.getElementById("multi-choice").classList.remove("d-flex");
+                        }
+                        if (!document.getElementById("common").classList.contains("d-none")) {
+                            document.getElementById("common").classList.add("d-none");
+                            document.getElementById("common").classList.remove("d-flex");
+                        }
+                        break;
+                    }
+
+                }
+                document.getElementById(question_id).getElementsByClassName("q-title")[0].focus();
+            }
+
+        </script>
     </div>
 </body>
 

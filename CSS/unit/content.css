@@ -17,10 +17,21 @@
 }
 @media (min-height: 300px){
     .body-content .content {
-        height: 450px;
-        /* overflow: auto; */
         width: 600px;
         margin-top: 20px;
         background-color: #fff;
     }
+}
+.body-content .content label {
+    width: 100px;
+}
+.body-content .content input {
+    width: 85%;
+    height: 40px;
+    margin: 2px 0;
+}
+.body-content .content textarea {
+    width: 85%;
+    height: 100px;
+    margin: 2px 0;
 }
