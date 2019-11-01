@@ -68,59 +68,61 @@
                     class="col-md-2 btn border-0 px-2 text-danger my-auto">Câu hỏi đánh giá</button>
                 <!-- <a href="#" class="col-md-1 text-secondary my-auto">Câu hỏi hình ảnh</a> -->
             </div>
-            <div class="row content mx-auto d-flex flex-column">
-                <div class="m-4 d-flex flex-column" id="common">
-                    <h3>Câu hỏi thường</h3>
+            <form action="index.html" method="post">
+                <div class="row content mx-auto d-flex flex-column">
+                    <div class="m-4 d-flex flex-column" id="common">
+                        <h3>Câu hỏi thường</h3>
 
-                    <label class="text-info font-weight-bold">Tiêu đề: </label>
-                    <div>
+                        <label class="text-info font-weight-bold">Tiêu đề: </label>
+                        <div>
 
-                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" autofocus />
-                        <span class="text-danger">&nbsp;(*)</span>
+                            <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" autofocus />
+                            <span class="text-danger">&nbsp;(*)</span>
+                        </div>
+
+                        <label class="text-info font-weight-bold">Câu hỏi: </label>
+                        <div class="d-flex">
+                            <textarea id="input-common"></textarea>
+                            <span class="text-danger ml-1">&nbsp;(*)</span>
+                        </div>
+
                     </div>
-
-                    <label class="text-info font-weight-bold">Câu hỏi: </label>
-                    <div class="d-flex">
-                        <textarea id="input-common"></textarea>
-                        <span class="text-danger ml-1">&nbsp;(*)</span>
+                    <div class="m-4 d-none flex-column" id="multi-choice">
+                        <h3>Câu hỏi multi-choice</h3>
+                        <label class="text-info font-weight-bold">Tiêu đề: </label>
+                        <div>
+                            <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
+                            <span class="text-danger">&nbsp;(*)</span>
+                        </div>
+                        <label class="text-info font-weight-bold">Nội dung: </label>
+                        <div>
+                            <input type="text" placeholder="Nhập câu hỏi" />
+                            <span class="text-danger">&nbsp;(*)</span>
+                        </div>
+                        <div class="mx-auto my-2">
+                            <button type="button" onclick="javascript:addMultiAnswer(this)"
+                                class="multi-ans btn btn-info">Thêm
+                                đáp án</button>
+                        </div>
                     </div>
-
+                    <div class="m-4 d-none flex-column" id="evaluate">
+                        <h3>Câu hỏi đánh giá</h3>
+                        <label class="text-info font-weight-bold">Tiêu đề: </label>
+                        <div>
+                            <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
+                            <span class="text-danger">&nbsp;(*)</span>
+                        </div>
+                        <label class="text-info font-weight-bold">Câu hỏi: </label>
+                        <div>
+                            <input type="text" />
+                            <span class="text-danger">&nbsp;(*)</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="m-4 d-none flex-column" id="multi-choice">
-                    <h3>Câu hỏi multi-choice</h3>
-                    <label class="text-info font-weight-bold">Tiêu đề: </label>
-                    <div>
-                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
-                        <span class="text-danger">&nbsp;(*)</span>
-                    </div>
-                    <label class="text-info font-weight-bold">Nội dung: </label>
-                    <div>
-                        <input type="text" placeholder="Nhập câu hỏi" />
-                        <span class="text-danger">&nbsp;(*)</span>
-                    </div>
-                    <div class="mx-auto my-2">
-                        <button type="button" onclick="javascript:addMultiAnswer(this)"
-                            class="multi-ans btn btn-info">Thêm
-                            đáp án</button>
-                    </div>
+                <div class=" mt-4 d-flex">
+                    <button class="btn btn-info mx-auto" type="submit" disabled>Đăng câu hỏi lên diễn đàn</button>
                 </div>
-                <div class="m-4 d-none flex-column" id="evaluate">
-                    <h3>Câu hỏi đánh giá</h3>
-                    <label class="text-info font-weight-bold">Tiêu đề: </label>
-                    <div>
-                        <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
-                        <span class="text-danger">&nbsp;(*)</span>
-                    </div>
-                    <label class="text-info font-weight-bold">Câu hỏi: </label>
-                    <div>
-                        <input type="text" />
-                        <span class="text-danger">&nbsp;(*)</span>
-                    </div>
-                </div>
-            </div>
-            <div class=" mt-4 d-flex">
-                <button class="btn btn-info mx-auto disabled" type="submit">Đăng câu hỏi lên diễn đàn</button>
-            </div>
+            </form>
         </div>
         <div class="footer">
 
