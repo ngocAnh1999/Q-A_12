@@ -35,3 +35,9 @@
     height: 100px;
     margin: 2px 0;
 }
+.body-content .content input.checkbox {
+    width: 15px;
+    height: 15px;
+    margin: auto 0;
+    margin-right: 4px;
+}

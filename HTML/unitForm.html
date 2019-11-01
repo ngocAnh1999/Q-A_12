@@ -8,7 +8,7 @@
     <title>unit form</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -105,11 +105,14 @@
                             <input type="text" placeholder="Nhập câu hỏi" />
                             <span class="text-danger">&nbsp;(*)</span>
                         </div>
+                        <label class="text-info font-weight-bold">Trả lời: </label>
+                        <div id="add-ans"></div>
                         <div class="mx-auto my-2">
-                            <button type="button" onclick="javascript:addMultiAnswer(this)"
+                            <button type="button" onclick="javascript:addMultiAnswer()"
                                 class="multi-ans btn btn-info">Thêm
                                 đáp án</button>
                         </div>
+                        
                     </div>
                     <div class="m-4 d-none flex-column" id="evaluate">
                         <h3>Câu hỏi đánh giá</h3>
@@ -175,8 +178,26 @@
                 }
                 document.getElementById(question_id).getElementsByClassName("q-title")[0].focus();
             }
-            function addMultiAnswer(me) {
-                debugger
+            function addMultiAnswer() {
+                let inputbox = document.createElement("input");
+                inputbox.setAttribute("type", "checkbox");
+                inputbox.setAttribute("class", "checkbox");
+                let input = document.createElement("input");
+                input.setAttribute("placeholder", "Nhập giá trị");
+                let span = document.createElement("span");
+                span.setAttribute("class", "glyphicon");
+                span.classList.add("glyphicon-remove");
+                span.classList.add("gly");
+                span.setAttribute("onclick", "javascript:deleteElement(this)");
+                let div = document.createElement("div");
+                div.appendChild(inputbox);
+                div.appendChild(input);
+                div.appendChild(span);
+                document.getElementById("add-ans").appendChild(div);
+            }
+            function deleteElement(me) {
+                // debugger
+                me.parentNode.parentNode.removeChild(me.parentNode);
             }
         </script>
     </div>

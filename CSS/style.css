@@ -25,3 +25,13 @@ button:hover {
 input, textarea {
     padding: 2px 4px;
 }
+.gly {
+    margin: auto 0;
+    margin-left: 4px;
+}
+.gly:hover {
+    cursor: pointer;
+}
+button {
+    font-size: 13px !important;
+}
