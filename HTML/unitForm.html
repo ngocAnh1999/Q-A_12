@@ -42,7 +42,24 @@
         </div>
         <div class="body-content">
             <div class="row toolbar font-weight-bolder border-bottom">
-                <div class="col"></div>
+                <div class="col-sm-6 h-100">
+                    <div class="row h-100">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html">Diễn đàn</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./unitForm.html">Đặt câu hỏi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thống kê câu hỏi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quản lý tài khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <button onclick="javascript:openBlockQuestion('common')"
                     class="col-md-2 btn border-0 px-2 text-info my-auto">Câu hỏi thường</button>
                 <button onclick="javascript:openBlockQuestion('multi-choice')"
@@ -72,7 +89,7 @@
                 <div class="m-4 d-none flex-column" id="multi-choice">
                     <h3>Câu hỏi multi-choice</h3>
                     <label class="text-info font-weight-bold">Tiêu đề: </label>
-                        <div>
+                    <div>
                         <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
                         <span class="text-danger">&nbsp;(*)</span>
                     </div>
@@ -89,12 +106,12 @@
                 </div>
                 <div class="m-4 d-none flex-column" id="evaluate">
                     <h3>Câu hỏi đánh giá</h3>
-                    <label  class="text-info font-weight-bold">Tiêu đề: </label>
+                    <label class="text-info font-weight-bold">Tiêu đề: </label>
                     <div>
                         <input class="q-title" name="title" type="text" placeholder="Nhập tiêu đề" />
                         <span class="text-danger">&nbsp;(*)</span>
                     </div>
-                    <label  class="text-info font-weight-bold">Câu hỏi: </label>
+                    <label class="text-info font-weight-bold">Câu hỏi: </label>
                     <div>
                         <input type="text" />
                         <span class="text-danger">&nbsp;(*)</span>
@@ -150,7 +167,9 @@
                 }
                 document.getElementById(question_id).getElementsByClassName("q-title")[0].focus();
             }
-
+            function addMultiAnswer(me) {
+                debugger
+            }
         </script>
     </div>
 </body>
