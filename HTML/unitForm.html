@@ -25,31 +25,36 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row header text-white">
-            <div class="col-sm-3 left">
-                <div class="genaral"></div>
-                <div class="q-a">Question & Answer</div>
-            </div>
-
-            <div class="col">
-                <h3 class="unit-name">Unit Form</h3>
-            </div>
-
-            <div class="col-md-3 user">
-                <div class="avatar"><img src="../Content/image/default_avata.png" /></div>
-                <div class="user-account">Đặng Thị Ngọc Ánh</div>
-            </div>
-        </div>
+            <div class="row header text-white">
+                    <div class="col-sm-3 left">
+                        <div class="genaral"></div>
+                        <div class="q-a">Question & Answer</div>
+                    </div>
+        
+                    <div class="col"></div>
+        
+                    <div class="col-md-2 user">
+                        <div class="avatar"><img src="../Content/image/default_avata.png" /></div>
+                        <div class="user-account dropdown">
+                            <div class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</div>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li role="presentation" class="text-center"><a role="menuitem" href="#">Đăng xuất</a></li>
+        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         <div class="body-content">
             <div class="row toolbar font-weight-bolder border-bottom">
-                <div class="col-sm-6 h-100">
+                <div class="col-sm-8 h-100">
                     <div class="row h-100">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="./index.html">Diễn đàn</a>
+                                <a class="nav-link " href="./index.html">Diễn đàn</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./unitForm.html">Đặt câu hỏi</a>
+                                <a class="nav-link active" href="./unitForm.html">Đặt câu hỏi</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Thống kê câu hỏi</a>
@@ -60,12 +65,13 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col"></div>
                 <button onclick="javascript:openBlockQuestion('common')"
-                    class="col-md-2 btn border-0 px-2 text-info my-auto">Câu hỏi thường</button>
+                    class="col-md-1 btn border-0 px-2 text-info my-auto">Câu hỏi thường</button>
                 <button onclick="javascript:openBlockQuestion('multi-choice')"
-                    class="col-md-2 btn border-0 px-2 text-success my-auto">Câu hỏi multi-choice</button>
+                    class="col-md-1 btn border-0 px-2 text-success my-auto">Câu hỏi multi-choice</button>
                 <button onclick="javascript:openBlockQuestion('evaluate')"
-                    class="col-md-2 btn border-0 px-2 text-danger my-auto">Câu hỏi đánh giá</button>
+                    class="col-md-1 btn border-0 px-2 text-danger my-auto">Câu hỏi đánh giá</button>
                 <!-- <a href="#" class="col-md-1 text-secondary my-auto">Câu hỏi hình ảnh</a> -->
             </div>
             <form action="index.html" method="post">
