@@ -17,6 +17,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css" />
     <link rel="stylesheet" href="../CSS/home/header.css" />
     <link rel="stylesheet" href="../CSS/home/content.css" />
@@ -211,6 +212,21 @@
                             </div>
                         </div>
             
+            </div>
+            <div class="row pagination m-0 bg-white p-4">
+                <div class="pagination-left d-flex col-md-4">
+                    <button type="button" class="btn btn-default mx-2 my-auto">
+                        <span aria-hidden="true" class="glyphicon glyphicon-backward"></span>
+                    </button>
+                    <input id="page-index" placeholder="Đi đến trang" />
+                    <span class="my-auto font-weight-bold" >&nbsp;/&nbsp;</span>
+                    <p class="my-auto font-weight-bold" id="page-total">1</p>
+                    <button type="button" class="btn btn-default mx-2 my-auto">
+                            <span aria-hidden="true" class="glyphicon glyphicon-forward"></span>
+                        </button>
+                </div>
+                <div class="col"></div>
+                <div class="col-md-2 pagination-right my-auto p-0">Trang số <span id="page-number">1</span></div>
             </div>
             
         </div>
