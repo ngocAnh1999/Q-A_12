@@ -1,6 +1,6 @@
 .content {
     background-color: #E8F2F4;
-    padding: 20px 10px;
+    padding: 0px 10px;
     overflow: auto;
     top: 55px;
     bottom: 60px;
@@ -8,12 +8,17 @@
     right: 0;
     position: absolute;
 }
+#toolbar-header {
+    background-color: #E8F2F4;
+    z-index: 1;
+}
 .content .toolbar {
     margin: auto 0;
     padding: 0;
     font-size: 25px;
     font-weight: 600;
     margin-left: 14px;
+    
 }
 .content .group-form {
     width: 100%;
@@ -64,7 +69,7 @@
     margin-bottom: 15px;
 }
 .body-content .wrap-content {
-    width: 60%;
+    width: 80%;
 }
 
 
@@ -75,9 +80,15 @@
 }
 .body-content .wrap-content .add-reply {
     width: 90%;
-    height: 150px;
     overflow: auto;
+}
+.content .row-pagination {
+    width: 100%;
+    bottom: 60px;
 }
 #page-index {
     width: 85px;
+}
+.body-content .wrap-content .wrap-left {
+    width: 70%;
 }
